@@ -1,0 +1,6 @@
+.deps
+.libs
+libXevie.la
+*.lo
+Makefile
+Makefile.in
