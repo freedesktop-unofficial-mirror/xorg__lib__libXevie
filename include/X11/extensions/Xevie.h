@@ -1,4 +1,3 @@
-/* $XdotOrg: $ */
 /************************************************************
 
 Copyright 2003 Sun Microsystems, Inc.
@@ -36,6 +35,14 @@ of the copyright holder.
 #define _XEVIE_H_
 
 #include <X11/Xfuncproto.h>
+
+#define X_XevieQueryVersion			0
+#define X_XevieStart				1
+#define X_XevieEnd				2
+#define X_XevieSend				3
+#define X_XevieSelectInput			4
+
+#define XevieNumberErrors			0
 
 #define XEVIE_UNMODIFIED    0
 #define XEVIE_MODIFIED   1
