@@ -1,3 +1,4 @@
+/* $XdotOrg: $ */
 /************************************************************
 
 Copyright 2003 Sun Microsystems, Inc.
@@ -34,6 +35,7 @@ of the copyright holder.
 #define NEED_EVENTS
 #define NEED_REPLIES
 #include <X11/Xlibint.h>
+#include <X11/extensions/Xevie.h>
 #include <X11/extensions/Xeviestr.h>
 #include <X11/extensions/Xext.h>
 #include <X11/extensions/extutil.h>
