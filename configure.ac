@@ -4,7 +4,7 @@ dnl Process this file with autoconf to create configure.
 
 AC_PREREQ([2.57])
 
-AC_INIT(libXevie, 1.0, [xorg@lists.freedestkop.org], libXevie)
+AC_INIT(libXevie, 1.0, [xorg@lists.freedesktop.org], libXevie)
 AM_INIT_AUTOMAKE([dist-bzip2])
 AM_MAINTAINER_MODE
 
