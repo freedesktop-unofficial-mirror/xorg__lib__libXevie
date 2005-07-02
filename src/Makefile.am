@@ -6,7 +6,7 @@ libXevie_la_LIBADD = $(XEVIE_LIBS)
 
 libXevie_la_CFLAGS = $(XEVIE_CFLAGS)
 
-INCLUDES = -I$(top_srcdir)/include/X11/extensions
+INCLUDES = -I$(top_srcdir)/include
 
 #
 # Library version info.  Check the libtool docs for
