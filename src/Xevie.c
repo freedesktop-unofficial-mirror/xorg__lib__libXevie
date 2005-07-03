@@ -1,4 +1,4 @@
-/* $XdotOrg: $ */
+/* $XdotOrg: xc/lib/Xevie/Xevie.c,v 1.2 2005/05/22 01:20:14 alanc Exp $ */
 /************************************************************
 
 Copyright 2003 Sun Microsystems, Inc.
