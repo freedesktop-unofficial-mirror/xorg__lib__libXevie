@@ -1,3 +1,12 @@
+2005-07-08  Keith Packard  <keithp@keithp.com>
+
+	reviewed by: <delete if not using a buddy>
+
+	* .cvsignore:
+	* include/.cvsignore:
+	* src/.cvsignore:
+	* src/Makefile.am:
+
 2005-05-21  Alan Coopersmith  <alan.coopersmith@sun.com
 
 	* COPYING:

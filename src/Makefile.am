@@ -4,7 +4,7 @@ libXevie_la_SOURCES = Xevie.c
 
 libXevie_la_LIBADD = $(XEVIE_LIBS)
 
-libXevie_la_CFLAGS = $(XEVIE_CFLAGS)
+AM_CFLAGS = $(XEVIE_CFLAGS)
 
 INCLUDES = -I$(top_srcdir)/include
 
