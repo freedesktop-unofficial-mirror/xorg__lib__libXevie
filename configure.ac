@@ -4,7 +4,7 @@ dnl Process this file with autoconf to create configure.
 
 AC_PREREQ([2.57])
 
-AC_INIT(libXevie, 1.0, [xorg@lists.freedesktop.org], libXevie)
+AC_INIT(libXevie, 0.99.0, [https://bugs.freedesktop.org/enter_bug.cgi?product=xorg], libXevie)
 AM_INIT_AUTOMAKE([dist-bzip2])
 AM_MAINTAINER_MODE
 
@@ -18,6 +18,8 @@ AC_PROG_LIBTOOL
 PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext)
 AC_SUBST(XEVIE_CFLAGS)
 AC_SUBST(XEVIE_LIBS)
+
+XORG_RELEASE_VERSION
 
 AC_OUTPUT([Makefile
 	   src/Makefile
