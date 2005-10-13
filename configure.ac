@@ -1,4 +1,4 @@
-dnl $XdotOrg: $
+dnl $Id$
 dnl
 dnl Process this file with autoconf to create configure.
 
@@ -19,9 +19,11 @@ PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext evieproto)
 AC_SUBST(XEVIE_CFLAGS)
 AC_SUBST(XEVIE_LIBS)
 
+XORG_MANPAGE_SECTIONS
 XORG_RELEASE_VERSION
 
 AC_OUTPUT([Makefile
 	   src/Makefile
+	   man/Makefile
            xevie.pc])
 
