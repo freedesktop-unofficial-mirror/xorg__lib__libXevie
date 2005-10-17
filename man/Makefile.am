@@ -32,7 +32,7 @@ libman_SOURCES = Xevie.man
 libman_DATA = $(libman_SOURCES:man=$(LIB_MAN_SUFFIX)) \
 	      $(Xevie_shadows:=.$(LIB_MAN_SUFFIX))
 
-BUILT_SOURCES = .shadows.DONE
+BUILT_SOURCES = shadows.DONE
 
 EXTRA_DIST = $(libman_SOURCES)
 
@@ -64,7 +64,7 @@ Xevie_shadows =                             \
     XevieSendEvent                          \
     XevieEnd
 
-.shadows.DONE:
+shadows.DONE:
 	-rm -f $(Xevie_shadows:=.$(LIB_MAN_SUFFIX))
 	(for i in $(Xevie_shadows:=.$(LIB_MAN_SUFFIX)) ; do \
 	 echo .so man$(LIB_MAN_SUFFIX)/Xevie.$(LIB_MAN_SUFFIX) > $$i; \
