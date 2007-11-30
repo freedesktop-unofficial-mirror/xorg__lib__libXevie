@@ -112,19 +112,9 @@ XevieQueryVersion(dpy, major_version_return, minor_version_return)
     return True;
 }
 
-/* Win32 reserves 20 colormap entries for its desktop */
-#ifndef TYP_RESERVED_ENTRIES
-#define TYP_RESERVED_ENTRIES 20
-#endif
-
 Status 
-#if NeedFunctionPrototypes
 XevieStart(
     Display* dpy)
-#else
-XevieStart(dpy)
-    Display* dpy;
-#endif
 {
     XExtDisplayInfo *info = find_display (dpy);
     xXevieStartReply rep;
