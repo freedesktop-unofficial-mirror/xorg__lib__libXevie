@@ -53,7 +53,11 @@ static long xevie_mask = 0;
  *                                                                           *
  *****************************************************************************/
 
-static int close_display();
+static int close_display(
+    Display *		/* dpy */,
+    XExtCodes *		/* codes */
+);
+
 static /* const */ XExtensionHooks xevie_extension_hooks = {
     NULL,                               /* create_gc */
     NULL,                               /* copy_gc */
@@ -82,10 +86,10 @@ static XEXT_GENERATE_CLOSE_DISPLAY (close_display, xevie_info)
  *****************************************************************************/
 
 Status
-XevieQueryVersion(dpy, major_version_return, minor_version_return)
-    Display* dpy;
-    int* major_version_return; 
-    int* minor_version_return;
+XevieQueryVersion(
+    Display	*dpy,
+    int		*major_version_return,
+    int		*minor_version_return)
 {
     XExtDisplayInfo *info = find_display (dpy);
     xXevieQueryVersionReply rep;
@@ -135,8 +139,7 @@ XevieStart(
 }
 
 Status
-XevieEnd(dpy)
-    Display* dpy;
+XevieEnd(Display *dpy)
 {
     XExtDisplayInfo *info = find_display (dpy);
     xXevieEndReply rep;
@@ -157,10 +160,10 @@ XevieEnd(dpy)
 }
 
 Status
-XevieSendEvent(dpy, event, dataType)
-    Display* dpy;
-    XEvent*  event;
-    char     dataType;
+XevieSendEvent(
+    Display	*dpy,
+    XEvent	*event,
+    int		 dataType)
 {
     xXevieSendReply rep;
     xXevieSendReq *req;
@@ -179,9 +182,9 @@ XevieSendEvent(dpy, event, dataType)
 }
 
 Status
-XevieSelectInput(dpy, event_mask)
-    Display* dpy;
-    long     event_mask;
+XevieSelectInput(
+    Display	*dpy,
+    long	 event_mask)
 {
     xXevieSelectInputReply rep;
     xXevieSelectInputReq *req;
