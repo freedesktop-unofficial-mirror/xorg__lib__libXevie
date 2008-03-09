@@ -1,5 +1,3 @@
-dnl $Id$
-dnl
 dnl Process this file with autoconf to create configure.
 
 AC_PREREQ([2.57])

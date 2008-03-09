@@ -1,5 +1,3 @@
-# $Id$
-
 AM_CFLAGS = $(XEVIE_CFLAGS) $(X_CFLAGS)
 
 SUBDIRS = src man
