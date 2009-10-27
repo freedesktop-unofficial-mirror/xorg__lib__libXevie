@@ -3,8 +3,7 @@ SUBDIRS = src man
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = xevie.pc
 
-EXTRA_DIST = xevie.pc.in ChangeLog
-MAINTAINERCLEANFILES = ChangeLog
+EXTRA_DIST = xevie.pc.in 
 
 .PHONY: ChangeLog
 
