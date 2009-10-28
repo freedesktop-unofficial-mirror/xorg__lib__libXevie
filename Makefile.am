@@ -5,9 +5,12 @@ pkgconfig_DATA = xevie.pc
 
 EXTRA_DIST = xevie.pc.in 
 
-.PHONY: ChangeLog
+.PHONY: ChangeLog INSTALL
+
+INSTALL:
+	$(INSTALL_CMD)
 
 ChangeLog:
 	$(CHANGELOG_CMD)
 
-dist-hook: ChangeLog
+dist-hook: ChangeLog INSTALL
