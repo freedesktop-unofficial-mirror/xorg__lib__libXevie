@@ -23,18 +23,13 @@
 
 libmandir = $(LIB_MAN_DIR)
 
-LIB_MAN_DIR_SUFFIX = $(LIB_MAN_DIR:@mandir@/man%=%)
+libman_PRE = Xevie.man $(Xevie_shadows:=.man)
 
-libman_PRE = Xevie.man
-
-libman_DATA = $(libman_PRE:man=@LIB_MAN_SUFFIX@) \
-	      $(Xevie_shadows:=.@LIB_MAN_SUFFIX@)
-
-BUILT_SOURCES = shadows.DONE
+libman_DATA = $(libman_PRE:man=@LIB_MAN_SUFFIX@)
 
 EXTRA_DIST = $(libman_PRE)
 
-CLEANFILES = $(libman_DATA) $(BUILT_SOURCES)
+CLEANFILES = $(libman_DATA)
 
 SUFFIXES = .$(LIB_MAN_SUFFIX) .man
 
@@ -42,7 +37,7 @@ SUFFIXES = .$(LIB_MAN_SUFFIX) .man
 .man.$(LIB_MAN_SUFFIX):
 	$(AM_V_GEN)$(SED) $(MAN_SUBSTS) < $< > $@
 
-# Generate man page shadow files (Replaces InstallManPageAliases from Imake)
+# man page shadow files (Replaces InstallManPageAliases from Imake)
 
 Xevie_shadows =                             \
     XevieQueryVersion                       \
@@ -51,8 +46,3 @@ Xevie_shadows =                             \
     XevieSendEvent                          \
     XevieEnd
 
-shadows.DONE:
-	-rm -f $(Xevie_shadows:=.@LIB_MAN_SUFFIX@)
-	(for i in $(Xevie_shadows:=.@LIB_MAN_SUFFIX@) ; do \
-	 echo .so man$(LIB_MAN_DIR_SUFFIX)/Xevie.$(LIB_MAN_SUFFIX) > $$i; \
-	 done)
