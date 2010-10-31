@@ -14,16 +14,10 @@ XORG_DEFAULT_OPTIONS
 AM_CONFIG_HEADER(config.h)
 
 # Check for progs
-AC_PROG_CC
 AC_PROG_LIBTOOL
 
 # Checks for pkg-config packages
 PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext evieproto)
-XEVIE_CFLAGS="$CWARNFLAGS $XEVIE_CFLAGS"
-AC_SUBST(XEVIE_CFLAGS)
-AC_SUBST(XEVIE_LIBS)
-
-XORG_CHECK_MALLOC_ZERO
 
 AC_OUTPUT([Makefile
 	   src/Makefile
