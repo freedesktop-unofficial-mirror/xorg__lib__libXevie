@@ -1,4 +1,3 @@
-/* $XdotOrg: $ */
 /************************************************************
 
 Copyright (c) 2003, Oracle and/or its affiliates. All rights reserved.

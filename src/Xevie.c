@@ -1,4 +1,3 @@
-/* $XdotOrg: xc/lib/Xevie/Xevie.c,v 1.2 2005/05/22 01:20:14 alanc Exp $ */
 /************************************************************
 
 Copyright (c) 2003, Oracle and/or its affiliates. All rights reserved.
