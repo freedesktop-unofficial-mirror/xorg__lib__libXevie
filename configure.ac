@@ -19,6 +19,10 @@ AC_PROG_LIBTOOL
 # Checks for pkg-config packages
 PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext evieproto)
 
+dnl Allow checking code with lint, sparse, etc.
+XORG_WITH_LINT
+XORG_LINT_LIBRARY([Xevie])
+
 AC_OUTPUT([Makefile
 	   src/Makefile
 	   man/Makefile

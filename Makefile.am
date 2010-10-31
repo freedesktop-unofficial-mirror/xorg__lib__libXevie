@@ -15,3 +15,9 @@ ChangeLog:
 	$(CHANGELOG_CMD)
 
 dist-hook: ChangeLog INSTALL
+
+if LINT
+# Check source code with tools like lint & sparse
+lint:
+	cd src && $(MAKE) $(AM_MAKEFLAGS) lint
+endif LINT
