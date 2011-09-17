@@ -107,7 +107,7 @@ XevieQueryVersion(
     return True;
 }
 
-Status 
+Status
 XevieStart(
     Display* dpy)
 {
@@ -117,7 +117,7 @@ XevieStart(
 
     XextCheckExtension(dpy, info, xevie_extension_name, False);
 
-    major_opcode = info->codes->major_opcode; 
+    major_opcode = info->codes->major_opcode;
     LockDisplay(dpy);
     GetReq(XevieStart, req);
     req->reqType = major_opcode;
@@ -136,7 +136,7 @@ XevieEnd(Display *dpy)
     xXevieEndReply rep;
     xXevieEndReq *req;
 
-    XextCheckExtension (dpy, info, xevie_extension_name, False); 
+    XextCheckExtension (dpy, info, xevie_extension_name, False);
 
     LockDisplay(dpy);
     GetReq(XevieEnd, req);
@@ -185,7 +185,7 @@ XevieSelectInput(
     req->reqType = major_opcode;
     req->xevieReqType = X_XevieSelectInput;
     req->event_mask = event_mask;
-    xevie_mask = event_mask;    
+    xevie_mask = event_mask;
     if (_XReply(dpy, (xReply *)&rep, 0, xFalse)) {
     }
     UnlockDisplay(dpy);
