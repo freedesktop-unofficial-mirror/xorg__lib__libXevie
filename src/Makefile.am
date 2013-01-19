@@ -6,7 +6,7 @@ libXevie_la_LIBADD = $(XEVIE_LIBS)
 
 AM_CFLAGS = $(CWARNFLAGS) $(XEVIE_CFLAGS)
 
-INCLUDES = -I$(top_srcdir)/include
+AM_CPPFLAGS = -I$(top_srcdir)/include
 
 libXevie_la_LDFLAGS = -version-number 1:0:0 -no-undefined
 
