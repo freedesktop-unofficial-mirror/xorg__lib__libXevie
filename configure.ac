@@ -21,7 +21,7 @@ XORG_MACROS_VERSION(1.8)
 XORG_DEFAULT_OPTIONS
 
 # Checks for pkg-config packages
-PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext evieproto)
+PKG_CHECK_MODULES(XEVIE, [xproto x11 xextproto xext evieproto >= 1.1.0])
 
 dnl Allow checking code with lint, sparse, etc.
 XORG_WITH_LINT

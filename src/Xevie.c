@@ -27,7 +27,7 @@ DEALINGS IN THE SOFTWARE.
 #define NEED_REPLIES
 #include <X11/Xlibint.h>
 #include <X11/extensions/Xevie.h>
-#include <X11/extensions/Xeviestr.h>
+#include <X11/extensions/evieproto.h>
 #include <X11/extensions/Xext.h>
 #include <X11/extensions/extutil.h>
 
