@@ -31,7 +31,7 @@ DEALINGS IN THE SOFTWARE.
 
 static XExtensionInfo _xevie_info_data;
 static XExtensionInfo *xevie_info = &_xevie_info_data;
-static char *xevie_extension_name = XEVIENAME;
+static const char *xevie_extension_name = XEVIENAME;
 static int major_opcode = 0;
 static long xevie_mask = 0;
 
